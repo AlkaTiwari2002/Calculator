@@ -1,0 +1,92 @@
+body {
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("calculator.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgb(109, 125, 148);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+#display {
+    height: 60px;
+    background-color: rgb(207, 206, 202);
+    font-size: 36px;
+    text-align: right;
+    padding: 15px;
+    line-height: 50px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#display:focus {
+    outline: none; 
+    background-color: rgb(255, 248, 229); 
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+.btn {
+    padding: 15px 5px;
+    text-align: center;
+    font-size: 26px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: rgb(207, 206, 202);
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+
+.btn:hover {
+    background-color: rgb(173, 166, 166);
+    transform: scale(1.1); 
+}
+
+.btn:active {
+    background-color: rgb(150, 140, 140);
+    transform: scale(1); 
+}
+
+@keyframes button-press {
+    0% { transform: scale(1); }
+    100% { transform: scale(0.95); }
+}
+
+.btn:active {
+    animation: button-press 0.1s ease-in-out;
+}
+
+.container {
+    margin: 5% auto;
+    box-sizing: border-box;
+}
